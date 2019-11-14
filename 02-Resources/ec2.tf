@@ -10,10 +10,11 @@ resource "aws_instance" "web" {
       password = "DevOps321"
       host = self.public_ip
     }
+
     inline = [
       "cd /tmp",
       "git clone https://github.com/ryhub42/Shell-Scripts.git",
-      "sh /tmp/shell-scripts/studentapp/install.sh",
+      "sh /tmp/Shell-Scripts/studentapp/install.sh",
     ]
   }
 }
