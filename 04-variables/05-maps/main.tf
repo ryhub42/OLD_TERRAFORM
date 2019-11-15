@@ -1,5 +1,5 @@
 variable "sample" {
-  type    = "map"
+  type    = map(string)
   default = {
     course_name = "DevOps"
     timing = "6AMIST"
