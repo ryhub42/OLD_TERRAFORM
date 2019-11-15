@@ -1,5 +1,5 @@
 variable "sample" {
-  default = "Hello World!"
+  ## default = "Hello World!"
 }
 
 resource "null_resource" "sample" {
