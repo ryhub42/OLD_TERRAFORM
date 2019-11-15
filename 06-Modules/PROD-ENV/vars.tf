@@ -5,3 +5,11 @@ variable "ami"{
 variable "instance_type" {
   default = "t2.medium"
 }
+
+variable "tags" {
+  type = "map"
+  default = {
+    env ="PROD"
+    project_name = "demo"
+  }
+}
