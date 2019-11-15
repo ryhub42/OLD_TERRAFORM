@@ -1,5 +1,5 @@
 variable "sample" {
-  type = "list"
+  type    = "list"
   default = ["apple", "banana"]
 }
 
