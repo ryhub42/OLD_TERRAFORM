@@ -1,5 +1,5 @@
 variable "sample" {
-  ## default = "Hello World!"
+  default = "Hello from inside the script!"
 }
 
 resource "null_resource" "sample" {
