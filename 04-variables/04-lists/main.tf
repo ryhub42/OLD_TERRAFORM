@@ -1,6 +1,6 @@
 variable "sample" {
-  type = list(string)
-  default = ["sg1", "sg2", "sg3", 10, true]
+  type = "list"
+  default = ["sg1", "sg2", "sg3", "sg4"]
 }
 
 resource "null_resource" "sample" {
