@@ -1,5 +1,5 @@
 variable "ami" {}
 variable "instance_type" {}
-varible   "tags" {
-  type ="map"
+variable   "tags" {
+  type = map(string)
 }
