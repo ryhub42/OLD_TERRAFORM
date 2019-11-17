@@ -8,5 +8,5 @@ resource "aws_db_instance" "default" {
   username             = "var.RDS_USERNAME"
   password             = "var.RDS_PASSWORD"
   parameter_group_name = "default.mariadb10.3"
-  identifier           = "${var.tags["project_name"]}-${var.tags["env"]}-mariadb"
+  identifier           = "${lower(var.tags["project_name"])}-${lower(var.tags["env"])}-mariadb"
 }
