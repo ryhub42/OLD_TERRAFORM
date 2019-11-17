@@ -1,5 +1,5 @@
 resource "aws_db_instance" "default" {
-  allocated_storage    = VAR.RDS_DB_SIZE
+  allocated_storage    = var.RDS_DB_SIZE
   storage_type         = "gp2"
   engine               = "mysql"
   engine_version       = "5.7"
@@ -7,5 +7,6 @@ resource "aws_db_instance" "default" {
   name                 = "var.RDS_DBNAME"
   username             = "var.RDS_USERNAME"
   password             = "var.RDS_PASSWORD"
-  parameter_group_name = "default.mysql5.7"
+  parameter_group_name = "default.mariadb10.3"
+  identifier           = "${var.tags["project_name"]}-${var.tags["env"]}-mariadb"
 }
