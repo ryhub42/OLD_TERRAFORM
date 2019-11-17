@@ -13,6 +13,4 @@ module "RDS" {
   RDS_PASSWORD      = var.RDS_PASSWORD
   RDS_DBNAME        = var.RDS_DBNAME
   tags              = var.tags
- ## identifier        =  "${var.tags["project_name"]}-${var.tags["env"]}"
-
 }
