@@ -1,4 +1,4 @@
-resource "aws_db_instance" "mariadb" {
+resource "aws_db_instance" "default" {
   allocated_storage    = var.RDS_DB_SIZE
   storage_type         = "gp2"
   engine               = "mariadb"
