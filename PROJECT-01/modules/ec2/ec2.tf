@@ -4,7 +4,6 @@ resource "aws_instance" "web" {
   tags          = {
     Name        = "${var.tags["project_name"]}-${var.tags["env"]}"
   }
-}
 
 provisioner "remote-exec" {
   connection {
@@ -17,7 +16,7 @@ provisioner "remote-exec" {
   inline = [
     "cd /tmp",
     "git clone https://github.com/ryhub42/Shell-Scripts.git",
-    "sh /tmp/Shell-Scripts/studentapp/webapp.sh" ${var.RDS_USERNAME},${var.RDS_PASSWORD} ${var.RDS_ENDPOINT} ${var.RDS_DBNAME}
+    "sh /tmp/Shell-Scripts/studentapp/webapp.sh ${var.RDS_USERNAME} ${var.RDS_PASSWORD} ${var.RDS_ENDPOINT} ${var.RDS_DBNAME}",
   ]
 }
 }
